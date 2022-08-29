@@ -7,7 +7,7 @@ class Ninja {
     }
 
     sayName(){
-        console.log(this.name);
+        console.log(this.constructor.name);
     }
 
     showStats(){
@@ -26,7 +26,7 @@ class Sensei extends Ninja {
     }
 
     speakWisdom(){
-        console.log("do your homework");
+        super.drinkSake(), console.log("do your homework");
     }
 
     showStats(){
@@ -43,4 +43,4 @@ class Sensei extends Ninja {
 const sensei1 = new Sensei("Master Splinter");
 //sensei1.speakWisdom();
 sensei1.showStats();
-//console.log(sensei1.wisdom);
+sensei1.sayName();
